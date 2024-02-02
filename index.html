@@ -9,6 +9,12 @@
 
 <body>
     <div>
+        <input type="text" v-model="values.message">
+        <div>
+            Mensaje: {{values.message}}
+        </div>
+    </div>
+    <div>
         <select v-model="values.author" v-effect="if (values.author) api.getMovies()">
             <option value="" disabled selected>Select your option</option>
             <option v-for="author in lists.authors" :value="author.id">{{author.name}}</option>

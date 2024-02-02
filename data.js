@@ -8,6 +8,7 @@ const lists = reactive({
 const values = reactive({
     author: '',
     movies: '',
+    message: '',
 });
 
 const buildUrlSearchParams = (params) => {

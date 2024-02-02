@@ -6,17 +6,17 @@
 
 ## Data.js
 
-Este código JavaScript utiliza funciones asíncronas para interactuar con una API y obtener datos. 
+Este código JavaScript utiliza la biblioteca `petite-vue` para crear una aplicación web y realizar operaciones de red. 
 
-La función `callGet` realiza una solicitud GET a un punto final de API especificado. Esta función toma dos argumentos: `apiEndpoint`, que es la URL del punto final de la API, y `params`, que es un objeto que contiene los parámetros de la solicitud. La función `buildUrlSearchParams` se utiliza para convertir el objeto `params` en una cadena de consulta URL. Luego, la función `fetch` se utiliza para realizar la solicitud GET a la API. Finalmente, la respuesta de la API se devuelve como un objeto JSON.
+Las funciones `callGet` y `callPost` son funciones asincrónicas que realizan solicitudes GET y POST respectivamente a un punto final de la API especificado. Ambas funciones utilizan la función `fetch` para realizar la solicitud de red y devuelven la respuesta como un objeto JSON. La función `callPost` también incluye un cuerpo de solicitud y establece el encabezado 'Content-Type' en 'application/json'. Si la respuesta no es exitosa, lanza un error.
 
-La función `callPost` es similar a `callGet`, pero realiza una solicitud POST en lugar de GET. Además de `apiEndpoint` y `params`, también toma un tercer argumento `body`, que es el cuerpo de la solicitud POST. El cuerpo de la solicitud se convierte en una cadena JSON antes de ser enviado.
+La función `getMovies` realiza una solicitud GET a la API para obtener una lista de películas de un autor específico. El autor se obtiene de un objeto reactivo `values`. Si la solicitud es exitosa, la lista de películas se almacena en el objeto reactivo `lists`. Si ocurre un error durante la solicitud, se llama a la función `errorHandler`.
 
-Las funciones `getMovies` y `getAuthor` utilizan `callGet` para obtener datos de películas y autores, respectivamente, de la API. Los datos obtenidos se almacenan en las propiedades `movies` y `authors` del objeto `lists`.
+La función `getAuthor` es similar a `getMovies`, pero obtiene una lista de autores en lugar de películas. 
 
-Finalmente, se crea una aplicación utilizando la función `createApp`, que toma un objeto con las propiedades `lists`, `values` y `api`. Las funciones `getMovies` y `getAuthor` se pasan como métodos de la propiedad `api`. Después de crear la aplicación, se monta utilizando el método `mount`.
+La función `errorHandler` simplemente registra cualquier error que se le pase en la consola.
 
-Las funciones `getMovies` y `getAuthor` se llaman al final del script para iniciar la obtención de datos de la API.
+Finalmente, se crea una aplicación `petite-vue` y se monta. Las funciones `getMovies` y `getAuthor` se llaman inmediatamente después de montar la aplicación para llenar los objetos reactivos con datos desde la API.
 
 
 ## index.html

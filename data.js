@@ -23,6 +23,9 @@ function errorHandler(err) {
 async function callGet(apiEndpoint, params) {
     const paramsString = buildUrlSearchParams(params);
     const res = await fetch(apiEndpoint + paramsString);
+    if (!res.ok) {
+        throw new Error('Network response was not ok');
+    }
     return await res.json();
 }
 

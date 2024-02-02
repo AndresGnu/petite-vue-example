@@ -1,4 +1,11 @@
+# Inicio rapido
+
+- Abra el proyecto con visual studio code
+- Instale la extension live Server
+- Ejecute o inicie la extension Live Server
+
 ## Data.js
+
 GitHub Copilot: Este código JavaScript utiliza funciones asíncronas para interactuar con una API y obtener datos. 
 
 La función `callGet` realiza una solicitud GET a un punto final de API especificado. Esta función toma dos argumentos: `apiEndpoint`, que es la URL del punto final de la API, y `params`, que es un objeto que contiene los parámetros de la solicitud. La función `buildUrlSearchParams` se utiliza para convertir el objeto `params` en una cadena de consulta URL. Luego, la función `fetch` se utiliza para realizar la solicitud GET a la API. Finalmente, la respuesta de la API se devuelve como un objeto JSON.

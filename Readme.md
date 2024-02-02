@@ -28,3 +28,9 @@ El primer elemento de selección permite al usuario elegir un autor de una lista
 El segundo elemento de selección permite al usuario elegir una película de una lista. Al igual que con el primer elemento de selección, la lista de películas se genera dinámicamente utilizando la directiva `v-for`. El valor de cada opción es el ID de la película y el texto mostrado es el nombre de la película. La directiva `v-model` se utiliza para vincular el valor seleccionado a la propiedad `values.movies`.
 
 Finalmente, el script `/data.js` se vincula al final del cuerpo del documento. Este script es un módulo, como lo indica el atributo `type="module"`. Este script probablemente contiene la lógica para obtener los datos de los autores y las películas, así como para manejar los cambios en los valores seleccionados.
+
+### Enlaces importantes
+- [Petite vue](https://github.com/vuejs/petite-vue)
+- [Sintaxis Template vue](https://es.vuejs.org/v2/guide/syntax)
+- [Renderizado de listas](https://es.vuejs.org/v2/guide/list)
+- [Formularios](https://es.vuejs.org/v2/guide/forms)

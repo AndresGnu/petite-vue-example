@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <select v-model="values.author" v-effect="if (values.author) api.getMovies()">
+            <option value="" disabled selected>Select your option</option>
+            <option v-for="author in lists.authors" :value="author.id">{{author.name}}</option>
+        </select>
+    </div>
+    <div>
+        <select v-model="values.movies">
+            <option value="" disabled selected>Select your option</option>
+
+            <option v-for="movie in lists.movies" :value="movie.id">{{movie.name}}</option>
+        </select>
+    </div>
+
+
+    <script src="/data.js" type="module"></script>
+</body>
+
+</html>

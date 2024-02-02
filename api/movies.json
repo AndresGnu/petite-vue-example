@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Movie Uno",
+        "author_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Movie Dos",
+        "author_id": 2
+    },
+    {
+        "id": 3,
+        "name": "Movie Tres",
+        "author_id": 3
+    }
+]
